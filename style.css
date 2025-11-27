@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #34495e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.display {
+    margin-bottom: 15px;
+}
+
+#result {
+    width: 100%;
+    height: 60px;
+    background: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    text-align: right;
+    padding: 0 15px;
+    outline: none;
+}
+
+.mode-toggle {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.mode-btn.active {
+    background: #e67e22;
+}
+
+.mode-btn:hover {
+    background: #3498db;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.number {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.operator {
+    background: #e67e22;
+    color: white;
+}
+
+.equals {
+    background: #27ae60;
+    color: white;
+}
+
+.clear {
+    background: #e74c3c;
+    color: white;
+}
+
+.scientific {
+    background: #3498db;
+    color: white;
+    font-size: 14px;
+}
+
+.memory-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.memory {
+    background: #9b59b6;
+    color: white;
+    font-size: 12px;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Hide scientific buttons in basic mode */
+.basic-mode .scientific {
+    display: none;
+}
+
+.basic-mode .buttons {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.basic-mode .zero {
+    grid-column: span 1;
+}
